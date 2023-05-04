@@ -14,7 +14,6 @@ useEffect(()=>{
             .then(data=> setItems(data))
 },[])
 
-
 	return (
 		<div>
 			<p>Total Product {items.length}</p>
