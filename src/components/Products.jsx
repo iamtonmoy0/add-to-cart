@@ -18,7 +18,7 @@ useEffect(()=>{
 	return (
 		<div>
 			<p>Total Product {items.length}</p>
-			{items.map(product =>  )}
+			{items.map(product => <ProductCard/> )}
 		</div>
 	);
 }
