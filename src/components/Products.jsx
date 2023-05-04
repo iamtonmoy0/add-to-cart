@@ -18,7 +18,7 @@ useEffect(()=>{
 	return (
 		<div>
 			<p>Total Product {items.length}</p>
-			{items.map(product => <ProductCard key={product.id} name={product.title} image={product.image} price={product.price} /> )}
+			{items.map(product => <ProductCard key={product.id} product={product} /> )}
 		</div>
 	);
 }
