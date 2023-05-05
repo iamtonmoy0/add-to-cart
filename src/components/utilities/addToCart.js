@@ -19,5 +19,21 @@ shoppingCart[id]=1;
 	localStorage.setItem('cart',JSON.stringify(shoppingCart))
 	
  }
-  
- export {addToCart};
+//  removing section
+  const removeDb=(id)=>{
+	const storedCart=localStorage.getItem('cart')
+	if(storedCart){
+		const shoppingCart=JSON.parse(storedCart)
+		if(id in shoppingCart){
+delete shoppingCart[id];
+localStorage.setItem('cart',JSON.stringify(shoppingCart))
+		}
+	}
+	
+  }
+  //clear full cart
+  const delCart=()=>{
+	localStorage.removeItem('cart')
+  }
+ export {addToCart,removeDb,delCart};
+ //important storing data to local storage

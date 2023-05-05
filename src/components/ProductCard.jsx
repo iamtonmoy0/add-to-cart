@@ -1,9 +1,12 @@
 import './ProductCard.css'
-import { addToCart } from './utilities/addToCart';
+import { addToCart,removeDb } from './utilities/addToCart';
 
 export const ProductCard = (product) => {
 	
  const{title,price,image,id} = product.product;
+ const removeCart=(id)=>{
+	removeDb(id)
+ }
  
 	return (
 	<>
@@ -12,6 +15,7 @@ export const ProductCard = (product) => {
 	<h1 >{title}</h1>
 	<p>Price:{price}$</p> 
 	<button type='submit' onClick={()=>addToCart(id)}> Add to cart</button>
+	<button onClick={()=>removeCart(id)}>Remove Cart</button>
 	</div>
 	</>
 	);
